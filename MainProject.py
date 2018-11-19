@@ -14,10 +14,10 @@ try :
         raise ValueError("It has to be less than 60")
 
     
-    h=input('Hour of Alarm :')
+    h=int(input('Hour of Alarm :'))
     if h>24:
         raise ValueError("It has to be less than 24")
-    m=input('Minute of Alarm :')
+    m=int(input('Minute of Alarm :'))
     if m>60:
         raise ValueError("It has to be less than 60")
 
@@ -28,7 +28,7 @@ try :
         print(str(hour)+":"+str(mini)+":"+str(sec))
         sec+=1
         time.sleep(1)
-        if h==hour and m==mini and sec==10 :
+        if h==hour and m==mini and sec==1 :
             random.shuffle(lst)
             for i in lst:
                 x=webbrowser.open(i)
